@@ -1,8 +1,12 @@
-import { Column, Entity, PrimaryColumn } from "typeorm";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { SkillBadge } from "./skillBadge.entity";
 
 @Entity()
-export class SkillParts {
-  @PrimaryColumn()
+export class SkillPart {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
   label: string;
 
   @Column()
@@ -10,4 +14,7 @@ export class SkillParts {
 
   @Column()
   selected: boolean;
+
+  @ManyToOne(() => SkillBadge, (badge) => badge.parts)
+  badge: SkillBadge;
 }

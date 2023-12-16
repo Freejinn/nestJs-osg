@@ -6,7 +6,7 @@ import { User } from './entities/user.entity';
 import { ConfigModule } from '@nestjs/config';
 import { SkillParent} from './entities/parentSkill.entity';
 import { SkillBadge } from './entities/skillBadge.entity';
-import { SkillParts } from './entities/skillPart.entity';
+import { SkillPart } from './entities/skillPart.entity';
 
 @Module({
   imports: [AuthModule, UserModule, 
@@ -17,7 +17,7 @@ import { SkillParts } from './entities/skillPart.entity';
       username: 'root',
       password: 'Poppy!79',
       database: 'testosg',
-      entities: [User, SkillParent, SkillBadge, SkillParts],
+      entities: [User, SkillParent, SkillBadge, SkillPart],
       synchronize: true,
       autoLoadEntities: true,
   }),

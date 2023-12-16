@@ -1,5 +1,6 @@
-import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from "typeorm";
-import { SkillParts } from "./skillPart.entity";
+import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { SkillPart } from "./skillPart.entity";
+import { SkillParent } from "./parentSkill.entity";
 
 @Entity()
 export class SkillBadge {
@@ -15,7 +16,9 @@ export class SkillBadge {
   @Column()
   progressPercentage: number;
 
-  @OneToOne(()=>SkillParts)
-  @JoinColumn()
-  parts: SkillParts;
+  @ManyToOne(() => SkillParent, (skill) => skill.badges)
+  skill: SkillParent;
+
+  @OneToMany(() => SkillPart, (part) => part.badge)
+  parts: SkillPart[];
 }
