@@ -4,23 +4,28 @@ import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './entities/user.entity';
 import { ConfigModule } from '@nestjs/config';
-import { SkillParent} from './entities/parentSkill.entity';
+import { SkillParent } from './entities/parentSkill.entity';
 import { SkillBadge } from './entities/skillBadge.entity';
 import { SkillPart } from './entities/skillPart.entity';
+import { SkillModule } from './skills/skill.module';
 
 @Module({
-  imports: [AuthModule, UserModule, 
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: 'Poppy!79',
-      database: 'testosg',
-      entities: [User, SkillParent, SkillBadge, SkillPart],
-      synchronize: true,
-      autoLoadEntities: true,
-  }),
-  ConfigModule.forRoot() ],
+  imports: [
+    AuthModule,
+    // UserModule,
+    SkillModule,
+    // TypeOrmModule.forRoot({
+    //   type: 'mysql',
+    //   host: 'localhost',
+    //   port: 3306,
+    //   username: 'root',
+    //   password: 'Poppy!79',
+    //   database: 'testosg',
+    //   entities: [User, SkillParent, SkillBadge, SkillPart],
+    //   synchronize: true,
+    //   autoLoadEntities: true,
+    // }),
+    ConfigModule.forRoot(),
+  ],
 })
 export class AppModule {}
