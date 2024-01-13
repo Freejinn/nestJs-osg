@@ -422,8 +422,8 @@ export const skillsConst: SkillParent[] = [
                 progressPercentage: 0,
                 parts: [
                     {
-                        label: '',
-                        descrip: '',
+                        label: 'yeah yeah yeah',
+                        descrip: 'More more more',
                         selected: false,
                     },
                     {
