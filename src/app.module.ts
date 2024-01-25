@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { User } from './entities/user.entity';
 import { ConfigModule } from '@nestjs/config';
+import { dataSourceOptions } from './data-source';
 import { SkillParent } from './entities/parentSkill.entity';
 import { SkillBadge } from './entities/skillBadge.entity';
 import { SkillPart } from './entities/skillPart.entity';
@@ -12,19 +12,10 @@ import { SkillModule } from './skills/skill.module';
 @Module({
   imports: [
     AuthModule,
-    // UserModule,
+    UserModule,
+    TypeOrmModule.forRoot(dataSourceOptions),
+    UserModule,
     SkillModule,
-    // TypeOrmModule.forRoot({
-    //   type: 'mysql',
-    //   host: 'localhost',
-    //   port: 3306,
-    //   username: 'root',
-    //   password: 'Poppy!79',
-    //   database: 'testosg',
-    //   entities: [User, SkillParent, SkillBadge, SkillPart],
-    //   synchronize: true,
-    //   autoLoadEntities: true,
-    // }),
     ConfigModule.forRoot(),
   ],
 })
