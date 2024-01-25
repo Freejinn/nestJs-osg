@@ -8,10 +8,12 @@ export class SkillController {
   constructor(private readonly skillService: SkillService) {}
 
   @Get()
-  getSkills(): Observable<SkillParent[]> {
+  getSkills() {
     console.log('in controller!');
-    return this.skillService
-      .getSkills()
-      .pipe(tap((response) => console.log('nestjs controller: ', response)));
+    
+    const skills = this.skillService.getSkills()
+    return skills
+      
+    // .pipe(tap((response) => console.log('nestjs controller: ', response)));
   }
 }
