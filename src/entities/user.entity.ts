@@ -16,9 +16,4 @@ export class User{
     @Column({nullable:false})
     password:string;
     
-
-//     @BeforeInsert()
-//     async hashpassword(){
-//         this.password = await bcrypt.hass(this.password,8)
-//     }
 }
