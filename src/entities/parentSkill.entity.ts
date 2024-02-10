@@ -1,5 +1,6 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { SkillBadge } from './skillBadge.entity';
+import { GroupSkill } from './groupSkill.entity';
 
 @Entity()
 export class SkillParent {
@@ -11,6 +12,9 @@ export class SkillParent {
 
   @Column()
   backgroundColor: string;
+
+  @ManyToOne(() => GroupSkill, (group)=>group.parents)
+  group: GroupSkill[];
 
   @OneToMany(() => SkillBadge, (badge) => badge.skill)
   badges: SkillBadge[];

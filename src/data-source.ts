@@ -1,7 +1,6 @@
 import { DataSource, DataSourceOptions } from 'typeorm';
 import { SkillParent } from './entities/parentSkill.entity';
-import { SkillBadge } from './entities/skillBadge.entity';
-import { SkillPart } from './entities/skillPart.entity';
+import { GroupSkill } from './entities/groupSkill.entity';
 
 export const dataSourceOptions: DataSourceOptions = {
   type: 'mysql',
@@ -11,7 +10,7 @@ export const dataSourceOptions: DataSourceOptions = {
   password: 'Poppy!79',
   database: 'testosg',
   entities: [__dirname + '/../**/*.entity.{js,ts}', 
-  SkillParent, SkillBadge, SkillPart],
+  GroupSkill],
   migrations: ['dist/migrations/*.js'],
   synchronize: true,
 };

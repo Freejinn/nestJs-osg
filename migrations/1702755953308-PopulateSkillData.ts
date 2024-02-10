@@ -6,11 +6,14 @@ import { MigrationInterface, QueryRunner } from "typeorm"
 export class PopulateSkillData1702755953308 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
-        // created this migration with `npm run migration:generate -- migrations/PopulateSkillData`.
         // once the code is written then you can apply it with `npm run migration:run
 
+        //Above doesn't work
 
-        // create skill parent
+        //New Migration: npx typeorm migration:create migrations/NameOfMigration
+
+
+        // skill parents
         const parentComprehensive = new SkillParent();
         parentComprehensive.label = 'Comprehensive Skills';
         parentComprehensive.backgroundColor = 'rgb(35, 58, 42)';
@@ -207,6 +210,13 @@ export class PopulateSkillData1702755953308 implements MigrationInterface {
         rockclimberBadge.imgPth = 'assets/images/rockclimber-badge.png';
         rockclimberBadge.progressPercentage = 0;
 
+        //Civics and Community Badges
+
+        const advocateBadge = new SkillBadge();
+        advocateBadge.skill = parentCivics;
+        advocateBadge.label = 'Advocate';
+        advocateBadge.imgPth = 'assets/images/advocate-badge.png';
+        advocateBadge.progressPercentage = 0;
        
 
         // create skill parts
@@ -269,47 +279,7 @@ export class PopulateSkillData1702755953308 implements MigrationInterface {
 
         // save all the entities to the DB
         await queryRunner.manager.save([
-            parentComprehensive,
-            parentOutdoor,
-            parentCivics,
-            parentCreative,
-            parentLifeSkill,
-            tenderfootBadge,
-            secondClassBadge,
-            firstClassBadge,
-            torchbearerBadge,
-            trailblazerBadge,
-            voyageBadge,
-            polarisBadge,
-            goldRoseBadge,
-            anglerBadge,
-            astronomerBadge,
-            backpackerBadge,
-            bikeCamperBadge,
-            birderBadge,
-            campEngineerBadge,
-            camperBadge,
-            canoeistBadge,
-            cookBadge,
-            cyclistBadge,
-            flowerBadge,
-            hikerBadge,
-            kayakerBadge,
-            marinerBadge,
-            naturalistBadge,
-            nauticalBadge,
-            observerBadge,
-            orienteerBadge,
-            rangerBadge,
-            rockclimberBadge,
-            tenderfootP1,
-            tenderfootP2,
-            tenderfootP3,
-            tenderfootP4,
-            tenderfootP5,
-            tenderfootP6,
-            tenderfootP7,
-            tenderfootP8
+            advocateBadge
         ]);
     }
 

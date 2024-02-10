@@ -1,19 +1,19 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { SkillParent } from 'src/entities/parentSkill.entity';
-import { SkillBadge } from 'src/entities/skillBadge.entity';
-import { SkillPart } from 'src/entities/skillPart.entity';
 import { Repository } from 'typeorm';
+import { ScoutGroup, SkillBadge } from './models/skills.model';
+import { GroupSkill } from 'src/entities/groupSkill.entity';
 
 @Injectable()
 export class SkillService {
   constructor(
-    @InjectRepository(SkillParent)
-    private parentRepository: Repository<SkillParent>,
+    @InjectRepository(GroupSkill)
+    private parentRepository: Repository<GroupSkill>,
     ) {}
   
   
-  getSkills(): Promise<SkillParent[]> {
+  getSkills(): Promise<GroupSkill[]> {
     console.log('in service!');
     return this.parentRepository.find();
 

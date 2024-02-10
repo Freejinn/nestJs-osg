@@ -1,9 +1,17 @@
+export interface ScoutGroup {
+    id: number;
+    label: string;
+    backgroundColor: string;
+    pic: string;
+    handbookUrl: string;
+    motto: string;
+    skillGroups: SkillParent[];
+}
 export interface SkillParent {
     id: number;
     label: string;
     backgroundColor: string;
     skills: SkillBadge[];
-
 }
 
 export interface SkillBadge {
@@ -12,7 +20,6 @@ export interface SkillBadge {
     label: string;
     progressPercentage: number;
     parts: SkillParts[];
-
 }
 
 export interface SkillParts {
