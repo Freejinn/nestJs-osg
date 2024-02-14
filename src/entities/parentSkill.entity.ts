@@ -14,7 +14,7 @@ export class SkillParent {
   backgroundColor: string;
 
   @ManyToOne(() => GroupSkill, (group)=>group.parents)
-  group: GroupSkill[];
+  group: GroupSkill;
 
   @OneToMany(() => SkillBadge, (badge) => badge.skill)
   badges: SkillBadge[];

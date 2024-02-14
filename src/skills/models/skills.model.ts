@@ -5,7 +5,7 @@ export interface ScoutGroup {
     pic: string;
     handbookUrl: string;
     motto: string;
-    skillGroups: SkillParent[];
+    parents: SkillParent[];
 }
 export interface SkillParent {
     id: number;

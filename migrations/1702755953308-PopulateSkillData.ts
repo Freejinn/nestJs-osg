@@ -12,7 +12,6 @@ export class PopulateSkillData1702755953308 implements MigrationInterface {
 
         //New Migration: npx typeorm migration:create migrations/NameOfMigration
 
-
         // skill parents
         const parentComprehensive = new SkillParent();
         parentComprehensive.label = 'Comprehensive Skills';
