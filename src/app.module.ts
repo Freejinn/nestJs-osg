@@ -5,6 +5,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { dataSourceOptions } from './data-source';
 import { SkillModule } from './skills/skill.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
   imports: [
@@ -14,6 +16,10 @@ import { SkillModule } from './skills/skill.module';
     UserModule,
     SkillModule,
     ConfigModule.forRoot(),
+    ServeStaticModule.forRoot({
+        // this maps the dist/assets directory to / in the web app
+        rootPath: join(__dirname, '..', 'assets')
+      }),
   ],
 })
 export class AppModule {}
