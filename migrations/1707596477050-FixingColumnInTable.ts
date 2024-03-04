@@ -1,4 +1,5 @@
 import { GroupSkill } from "src/entities/groupSkill.entity";
+import { SkillParent } from "src/entities/parentSkill.entity";
 import { MigrationInterface, QueryRunner, TableColumn } from "typeorm";
 
 export class FixingColumnInTable1707596477050 implements MigrationInterface {
@@ -13,8 +14,9 @@ export class FixingColumnInTable1707596477050 implements MigrationInterface {
         groupOtter.handbookUrl = 'https://docs.guides4guides.org/Otters/field_book_otters_v2_revised.pdf';
         groupOtter.motto = 'Busy and bright!';
 
+
         await queryRunner.manager.save([
-            groupOtter
+            groupOtter,
         ]);
     }
 

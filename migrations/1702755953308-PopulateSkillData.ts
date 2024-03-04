@@ -8,7 +8,6 @@ export class PopulateSkillData1702755953308 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         // once the code is written then you can apply it with `npm run migration:run
 
-        //Above doesn't work
 
         //New Migration: npx typeorm migration:create migrations/NameOfMigration
 
@@ -41,49 +40,49 @@ export class PopulateSkillData1702755953308 implements MigrationInterface {
         const tenderfootBadge = new SkillBadge();
         tenderfootBadge.skill = parentComprehensive; // relates it to the parent
         tenderfootBadge.label = 'Tenderfoot';
-        tenderfootBadge.imgPth = 'assets/images/tenderfoot-badge.jpg';
+        tenderfootBadge.imgPath = 'assets/images/tenderfoot-badge.jpg';
         tenderfootBadge.progressPercentage = 0;
 
         const secondClassBadge = new SkillBadge();
         secondClassBadge.skill = parentComprehensive;
         secondClassBadge.label = 'Second Class';
-        secondClassBadge.imgPth = 'assets/images/secondclass-badge.jpg';
+        secondClassBadge.imgPath = 'assets/images/secondclass-badge.jpg';
         secondClassBadge.progressPercentage = 0;
 
         const firstClassBadge = new SkillBadge();
         firstClassBadge.skill = parentComprehensive;
         firstClassBadge.label = 'First Class';
-        firstClassBadge.imgPth = 'assets/images/firstclass-badge.png';
+        firstClassBadge.imgPath = 'assets/images/firstclass-badge.png';
         firstClassBadge.progressPercentage = 0;
 
         const torchbearerBadge = new SkillBadge();
         torchbearerBadge.skill = parentComprehensive;
         torchbearerBadge.label = 'Torchbearer';
-        torchbearerBadge.imgPth = 'assets/images/torchbearer-badge.jpg';
+        torchbearerBadge.imgPath = 'assets/images/torchbearer-badge.jpg';
         torchbearerBadge.progressPercentage = 0;
 
         const trailblazerBadge = new SkillBadge();
         trailblazerBadge.skill = parentComprehensive;
         trailblazerBadge.label = 'Trailblazer';
-        trailblazerBadge.imgPth = 'assets/images/trailblazer-badges.jpg';
+        trailblazerBadge.imgPath = 'assets/images/trailblazer-badges.jpg';
         trailblazerBadge.progressPercentage = 0;
 
         const voyageBadge = new SkillBadge();
         voyageBadge.skill = parentComprehensive;
         voyageBadge.label = 'Voyager';
-        voyageBadge.imgPth = 'assets/images/voyager-badge.jpg';
+        voyageBadge.imgPath = 'assets/images/voyager-badge.jpg';
         voyageBadge.progressPercentage = 0;
 
         const polarisBadge = new SkillBadge();
         polarisBadge.skill = parentComprehensive;
         polarisBadge.label = 'Polaris Award';
-        polarisBadge.imgPth = 'assets/images/polaris.png';
+        polarisBadge.imgPath = 'assets/images/polaris.png';
         polarisBadge.progressPercentage = 0;
 
         const goldRoseBadge = new SkillBadge();
         goldRoseBadge.skill = parentComprehensive;
         goldRoseBadge.label = 'Gold Compass Rose';
-        goldRoseBadge.imgPth = 'assets/images/goldcompass-award.png';
+        goldRoseBadge.imgPath = 'assets/images/goldcompass-award.png';
         goldRoseBadge.progressPercentage = 0;
 
         //Outdoor Skill Badges
@@ -91,122 +90,122 @@ export class PopulateSkillData1702755953308 implements MigrationInterface {
         const anglerBadge = new SkillBadge();
         anglerBadge.skill = parentOutdoor;
         anglerBadge.label = 'Angler';
-        anglerBadge.imgPth = 'assets/images/angler-badge.jpg';
+        anglerBadge.imgPath = 'assets/images/angler-badge.jpg';
         anglerBadge.progressPercentage = 0;
 
         
         const astronomerBadge = new SkillBadge();
         astronomerBadge.skill = parentOutdoor;
         astronomerBadge.label = 'Astronomer';
-        astronomerBadge.imgPth = 'assets/images/astronomer-badge.jpg';
+        astronomerBadge.imgPath = 'assets/images/astronomer-badge.jpg';
         astronomerBadge.progressPercentage = 0;
 
         const backpackerBadge = new SkillBadge();
         backpackerBadge.skill = parentOutdoor;
         backpackerBadge.label = 'Backpacker';
-        backpackerBadge.imgPth = 'assets/images/backpacker-badge.png';
+        backpackerBadge.imgPath = 'assets/images/backpacker-badge.png';
         backpackerBadge.progressPercentage = 0;
 
         const bikeCamperBadge = new SkillBadge();
         bikeCamperBadge.skill = parentOutdoor;
         bikeCamperBadge.label = 'Bicycle Camper';
-        bikeCamperBadge.imgPth = 'assets/images/bicycle-camp-badge.jpg';
+        bikeCamperBadge.imgPath = 'assets/images/bicycle-camp-badge.jpg';
         bikeCamperBadge.progressPercentage = 0;
 
         const birderBadge = new SkillBadge();
         birderBadge.skill = parentOutdoor;
         birderBadge.label = 'Birder';
-        birderBadge.imgPth = 'assets/images/goldcompass-award.png';
+        birderBadge.imgPath = 'assets/images/goldcompass-award.png';
         birderBadge.progressPercentage = 0;
 
         const campEngineerBadge = new SkillBadge();
         campEngineerBadge.skill = parentOutdoor;
         campEngineerBadge.label = 'Camp Engineer';
-        campEngineerBadge.imgPth = 'assets/images/engineer-badge.png';
+        campEngineerBadge.imgPath = 'assets/images/engineer-badge.png';
         campEngineerBadge.progressPercentage = 0;
 
         const camperBadge = new SkillBadge();
         camperBadge.skill = parentOutdoor;
         camperBadge.label = 'Camper';
-        camperBadge.imgPth = 'assets/images/camp-badge.png';
+        camperBadge.imgPath = 'assets/images/camp-badge.png';
         camperBadge.progressPercentage = 0;
 
         const canoeistBadge = new SkillBadge();
         canoeistBadge.skill = parentOutdoor;
         canoeistBadge.label = 'Canoeist';
-        canoeistBadge.imgPth = 'assets/images/canoeist-badge.png';
+        canoeistBadge.imgPath = 'assets/images/canoeist-badge.png';
         canoeistBadge.progressPercentage = 0;
 
         const cookBadge = new SkillBadge();
         cookBadge.skill = parentOutdoor;
         cookBadge.label = 'Cook';
-        cookBadge.imgPth = 'assets/images/cooking-badge.jpg';
+        cookBadge.imgPath = 'assets/images/cooking-badge.jpg';
         cookBadge.progressPercentage = 0;
 
         const cyclistBadge = new SkillBadge();
         cyclistBadge.skill = parentOutdoor;
         cyclistBadge.label = 'Cyclist';
-        cyclistBadge.imgPth = 'assets/images/cyclist-badge.png';
+        cyclistBadge.imgPath = 'assets/images/cyclist-badge.png';
         cyclistBadge.progressPercentage = 0;
 
         const flowerBadge = new SkillBadge();
         flowerBadge.skill = parentOutdoor;
         flowerBadge.label = 'Flower Finder';
-        flowerBadge.imgPth = 'assets/images/flower-badge.png';
+        flowerBadge.imgPath = 'assets/images/flower-badge.png';
         flowerBadge.progressPercentage = 0;
 
         const hikerBadge = new SkillBadge();
         hikerBadge.skill = parentOutdoor;
         hikerBadge.label = 'Hiker';
-        hikerBadge.imgPth = 'assets/images/hiker-badge.png';
+        hikerBadge.imgPath = 'assets/images/hiker-badge.png';
         hikerBadge.progressPercentage = 0;
 
         const kayakerBadge = new SkillBadge();
         kayakerBadge.skill = parentOutdoor;
         kayakerBadge.label = 'Kayaker';
-        kayakerBadge.imgPth = 'assets/images/kayaker-badge.png';
+        kayakerBadge.imgPath = 'assets/images/kayaker-badge.png';
         kayakerBadge.progressPercentage = 0;
 
         const marinerBadge = new SkillBadge();
         marinerBadge.skill = parentOutdoor;
         marinerBadge.label = 'Mariner';
-        marinerBadge.imgPth = 'assets/images/mariner-badge.png';
+        marinerBadge.imgPath = 'assets/images/mariner-badge.png';
         marinerBadge.progressPercentage = 0;
 
         const naturalistBadge = new SkillBadge();
         naturalistBadge.skill = parentOutdoor;
         naturalistBadge.label = 'Naturalist';
-        naturalistBadge.imgPth = 'assets/images/naturalist-badge.png';
+        naturalistBadge.imgPath = 'assets/images/naturalist-badge.png';
         naturalistBadge.progressPercentage = 0;
 
         const nauticalBadge = new SkillBadge();
         nauticalBadge.skill = parentOutdoor;
         nauticalBadge.label = 'Nautical Camper';
-        nauticalBadge.imgPth = 'assets/images/nautical-camp-badge.png';
+        nauticalBadge.imgPath = 'assets/images/nautical-camp-badge.png';
         nauticalBadge.progressPercentage = 0;
 
         const observerBadge = new SkillBadge();
         observerBadge.skill = parentOutdoor;
         observerBadge.label = 'Observer';
-        observerBadge.imgPth = 'assets/images/observer-badge.png';
+        observerBadge.imgPath = 'assets/images/observer-badge.png';
         observerBadge.progressPercentage = 0;
 
         const orienteerBadge = new SkillBadge();
         orienteerBadge.skill = parentOutdoor;
         orienteerBadge.label = 'Orienteer';
-        orienteerBadge.imgPth = 'assets/images/orienteer-badge.png';
+        orienteerBadge.imgPath = 'assets/images/orienteer-badge.png';
         orienteerBadge.progressPercentage = 0;
 
         const rangerBadge = new SkillBadge();
         rangerBadge.skill = parentOutdoor;
         rangerBadge.label = 'Ranger';
-        rangerBadge.imgPth = 'assets/images/ranger-badge.png';
+        rangerBadge.imgPath = 'assets/images/ranger-badge.png';
         rangerBadge.progressPercentage = 0;
 
         const rockclimberBadge = new SkillBadge();
         rockclimberBadge.skill = parentOutdoor;
         rockclimberBadge.label = 'Rock Climber';
-        rockclimberBadge.imgPth = 'assets/images/rockclimber-badge.png';
+        rockclimberBadge.imgPath = 'assets/images/rockclimber-badge.png';
         rockclimberBadge.progressPercentage = 0;
 
         //Civics and Community Badges
@@ -214,7 +213,7 @@ export class PopulateSkillData1702755953308 implements MigrationInterface {
         const advocateBadge = new SkillBadge();
         advocateBadge.skill = parentCivics;
         advocateBadge.label = 'Advocate';
-        advocateBadge.imgPth = 'assets/images/advocate-badge.png';
+        advocateBadge.imgPath = 'assets/images/advocate-badge.png';
         advocateBadge.progressPercentage = 0;
        
 

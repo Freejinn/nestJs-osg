@@ -8,7 +8,7 @@ export class SkillBadge {
   id: number;
 
   @Column()
-  imgPth: string;
+  imgPath: string;
 
   @Column()
   label: string;
