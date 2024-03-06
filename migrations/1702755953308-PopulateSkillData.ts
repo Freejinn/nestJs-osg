@@ -93,7 +93,6 @@ export class PopulateSkillData1702755953308 implements MigrationInterface {
         anglerBadge.imgPath = 'assets/images/angler-badge.jpg';
         anglerBadge.progressPercentage = 0;
 
-        
         const astronomerBadge = new SkillBadge();
         astronomerBadge.skill = parentOutdoor;
         astronomerBadge.label = 'Astronomer';
