@@ -1,5 +1,4 @@
 import { DataSource, DataSourceOptions } from 'typeorm';
-import { SkillParent } from './entities/parentSkill.entity';
 import { GroupSkill } from './entities/groupSkill.entity';
 
 export const dataSourceOptions: DataSourceOptions = {
